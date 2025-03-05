@@ -1,0 +1,105 @@
+:root{
+    --header-color:rgb(44, 90, 108);
+    --bcg-color:rgb(244, 244, 244);
+    --padding:20px;
+    --text-color:white;
+    --border-radius:12px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bcg-color);
+    width: 100vw;
+}
+header{
+    background-color: var(--header-color);
+    padding: var(--padding);
+    color: var(--text-color);
+}
+header h1{
+    font-size: 36px;
+}
+main{
+    min-height: 80vh;
+    padding: var(--padding);
+    max-width: 800px;
+    margin: 0 auto;
+}
+form{
+    display: flex;
+    justify-content: center;
+}
+form input{
+    flex-grow: 1;
+}
+.result p a, form input[type="text"],form button[type="submit"]{
+    border: none;
+    font-size: 16px;
+    outline: none;
+    padding: calc(var(--padding)/2);
+    font-weight: 500;
+    border-radius: var(--border-radius);
+}
+
+.result p a,form button[type="submit"]{
+    background-color: var(--header-color);
+    margin-left: 10px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+footer{
+    background-color: var(--header-color);
+    padding: var(--padding);
+    color: var(--text-color);
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 18px;
+}
+
+.result{
+    /* min-width: */
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: var(--border-radius);
+    padding: var(--padding);
+}
+.result p{
+    margin: 5px 0px;
+}
+.partOfSpeech{
+    font-style: italic;
+    color: grey;
+    font-size: 15px;
+    text-decoration: underline;
+}
+.result li{
+    margin-left: 10px;
+}
+
+.result p a{
+    text-decoration: none;
+    padding: calc(var(--padding)/2);
+}
+
+@media screen and (max-width:330px) {
+    form{
+        display:flex;
+        flex-direction:column;
+    }
+    form button[type="submit"]{
+        margin-left: 0px;
+        margin-top: 10px;
+    
+    }
+   
+}
